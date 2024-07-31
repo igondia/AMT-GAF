@@ -21,12 +21,15 @@ If you find our code or paper useful, please consider citing our paper:
   keywords={Task analysis;Predictive models;Visualization;Multitasking;Grasping;Forecasting;Hidden Markov models;Grasping action forecasting;multi-task learning;interpretable attention prediction;constrained loss},
   doi={10.1109/JBHI.2024.3430810}
  }
+```
 
 ## HOW-TO-USE
 We provide scripts for training and testing. You need to modify the paths in the config files located at experiments/config
 
-> ## 1. SHARON dataset
-> ### Training a new model:
+### 1. SHARON dataset
+
+Training a new model:
+``` 
 From base folder AMT-GAF type:
 >experiments/scripts/sharon_ap_cv.sh $fold_num $config_num
-
+```
