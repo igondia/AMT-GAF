@@ -28,8 +28,31 @@ We provide scripts for training and testing. You need to modify the paths in the
 
 ### 1. SHARON dataset
 
-Training a new model:
+To train a new model, from the base folder AMT-GAF, type:
+
 ``` 
-From base folder AMT-GAF type:
->experiments/scripts/sharon_ap_cv.sh $fold_num $config_num
+experiments/scripts/sharon_ap_cv.sh $fold_num $config_num
 ```
+
+To test a model, from the base folder AMT-GAF, type:
+
+``` 
+>experiments/scripts/sharon_ap_cvt.sh $fold_num $epoch_num $config_num
+```
+
+where $epoch_num is the epoch number you would like to test.
+
+### 1. GITW dataset
+
+To train a new model, from the base folder AMT-GAF, type:
+
+``` 
+experiments/scripts/gitw_ap_cv.sh $fold_num $config_num
+```
+To test a model, from the base folder AMT-GAF, type:
+
+``` 
+experiments/scripts/gitw_ap_cvt.sh $fold_num $epoch_num $config_num
+```
+
+where $epoch_num is the epoch number you would like to test.
