@@ -1,0 +1,66 @@
+#GENERAL PARAMETERS
+EXP_DIR: "gitw-ap-1"
+DB_DIR: "/home/igonzalez/workspace/incia/Datasets/GITW"
+
+#PARAMETERS FOR INPUT FEATURES 
+PARAMETRIZATION: 1 #GITW
+BG_SCORE: 0.25
+GRID_SIZE: 
+- 16
+- 9
+SEED : 999
+FMEANS: 
+- 1.0636e+02
+- 2.1296e+01
+- 1.3223e+01
+- 1.9776e-01
+- 5.8823e-02
+- 8.6640e-02
+- 8.0061e-02
+FSTDS:
+- 1.4432e+02
+- 3.1109e+01
+- 2.2973e+01
+- 3.2824e-01
+- 1.3994e-01
+- 1.58900000
+- 1.54900000
+
+#ARCHITECTURE PARAMETERS
+ATT_SIZE: 256
+ZLENGTH: 256
+MAP_OP: "2x_conv3x3"
+DROPOUT: 0.00
+TEMPORAL_HORIZON: 6 #Temporal horizon in the transformer encoder
+
+#TASK DEFINITION PARAMETERS
+FRS_TO_PREDICT: 5
+TIME_MARKS: #Time marks (measured in frames) to compute the results of the prediction
+- 5
+- 10
+- 15
+- 20
+- 25
+- 30
+- 35
+- 40
+- 45
+- 50
+#TRAIN SPECIFIC PARAMETERS 
+TRAIN:
+  NOISE_STD: 0.25
+  SAMPLES_PER_BATCH : 256
+  BATCH_SIZE : 1
+  NUM_WORKERS: 3
+  PERMUTE_OBJ: False #Permute objects during training
+  LR : 0.0005
+  MOMENTUM : 0.9
+  WD: 0.0001
+  LOSS_TH: 0.07 #Value for Constrained optimization for gaze prediction
+#TEST SPECIFIC PARAMETERS 
+TEST:
+  NUM_WORKERS: 0
+  DETECTION_WINDOW: 0.0
+  PRE_FRAMES: 25
+
+

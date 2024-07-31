@@ -1,0 +1,258 @@
+experiments/scripts/sharon_ap_cvt.sh 1 20 1
+Called with args:
+Namespace(trained_net='output/sharon-ap-1/sharon_train_1/model_epoch20.pth', cfg_file='./experiments/cfgs/sharon-ap-1.yml', wait=True, imdb_name='sharon_test_1', seqdb_name='sharon1_test', set_cfgs=None)
+Using config:
+{'ACT_LAYERS_SIZE': 256,
+ 'ATT_SIZE': 512,
+ 'AUTOMATIC_NORM': False,
+ 'BG_SCORE': 0.0,
+ 'CACHE_DIR': '/home/igonzalez/workspace/incia/workspace/AMT-GAF/data/cache',
+ 'DB_DIR': '/home/igonzalez/workspace/incia/Datasets/GraspingDataset',
+ 'DELAY_FRAMES': 0,
+ 'DROPOUT': 0.0,
+ 'EXP_DIR': 'sharon-ap-1',
+ 'FLOW_MEAN': 1.1833,
+ 'FLOW_STD': 3.6951,
+ 'FMEANS': array([ 1.2668e+02,  8.9244e+00, -1.3254e+00,  1.9846e-01,  4.3478e-02,
+        5.4052e-02,  5.2136e-02]),
+ 'FRAMES_ACTIVE_OBJ': 10,
+ 'FRS_TO_PREDICT': 5,
+ 'FSTDS': array([111.2583,  17.856 ,  11.7072,   0.2955,   0.1602,   1.627 ,
+         1.6   ]),
+ 'GRID_SIZE': array([12, 12]),
+ 'INPUT_WEIGHTS': array([1., 1., 1., 1., 1., 1., 1.], dtype=float32),
+ 'MAP_OP': '2x_conv3x3',
+ 'MAXMV': 100.0,
+ 'MEMORY_FACTOR': 0.9,
+ 'NHEAD': 1,
+ 'OBJ_CROPPING': True,
+ 'OBJ_CROPSIZE': 350,
+ 'OBJ_PIXEL_MEANS': array([0.485, 0.456, 0.406]),
+ 'OBJ_PIXEL_STDS': array([0.229, 0.224, 0.225]),
+ 'PARAMETRIZATION': 2,
+ 'POS_ENCODING_LENGTH': 0,
+ 'POS_ENCODING_TYPE': 'sum',
+ 'PRE_FRAMES': 0,
+ 'RGB_MEAN': 0.8467,
+ 'RGB_STD': 1.5685,
+ 'ROOT_DIR': '/home/igonzalez/workspace/incia/workspace/AMT-GAF',
+ 'SEED': 999,
+ 'SIGMA_MAPS': 10.0,
+ 'SIGMA_MAPS1': 105.0,
+ 'TEMPORAL_HORIZON': 50,
+ 'TEST': {'CUT_FRAMES': 0,
+          'DETECTION_GUARD': 0.0,
+          'DETECTION_TH': 0.8,
+          'DETECTION_WINDOW': 1.0,
+          'FR_TO_SHOW': 0,
+          'F_A': 24,
+          'F_O': 24,
+          'F_P': 24,
+          'F_S': 1,
+          'NUM_WORKERS': 0,
+          'PRE_FRAMES': 0,
+          'SAVE_GAZE_PATTERNS': False},
+ 'TH_ACC': 5.0,
+ 'TH_MOV': 5.0,
+ 'TH_VWM': 0.1,
+ 'TIME_MARKS': array([ 30,  45,  60,  75,  90, 105, 120, 135, 150]),
+ 'TRAIN': {'ACC_FRAMES_BETWEEN': 5,
+           'ACC_MIN_FRAMES_DET': 3,
+           'ACC_PRE_FRAMES': 75,
+           'ACTLOSS_MIN_FRAMES_DET': 5,
+           'ACTLOSS_MUL': 2.0,
+           'ACTLOSS_PRE_FRAMES': 25,
+           'BATCH_SIZE': 1,
+           'BETA1': 0.9,
+           'BETA2': 0.999,
+           'CLIP_GRADS': 10.0,
+           'FREEZE_GAZE': False,
+           'F_A': 24,
+           'F_O': 24,
+           'F_P': 1,
+           'F_S': 1,
+           'HARD_MINING': False,
+           'LOSS_BALANCE_CLASSES': False,
+           'LOSS_ETA': 1.0,
+           'LOSS_MAX_ITERS': 2,
+           'LOSS_TH': 0.005,
+           'LOSS_WEIGHTS': array([1., 1.]),
+           'LR': 0.0005,
+           'LR_GAMMA': 0.5,
+           'LR_STEP_SIZE': 200,
+           'MAX_GAZE_DEV': 1000.0,
+           'MOMENTUM': 0.9,
+           'NOISE_FR_IDX': False,
+           'NOISE_STD': 0.25,
+           'NUM_WORKERS': 3,
+           'PERMUTE_OBJ': True,
+           'REMOVE_BAD_SEQUENCES_PROP': 0.0,
+           'SAMPLES_PER_BATCH': 256,
+           'SNAPSHOT_ITERS': 10000,
+           'UPDATE_SEQNET_TYPE': 'iter',
+           'WD': 0.0001,
+           'WEIGHTED_SAMPLER': False,
+           'WEIGHTED_SAMPLER_PARAM': 1.0},
+ 'VWM_CAPACITY': 5,
+ 'ZLENGTH': 512}
+Random Seed: 999
+cuda:0
+Video 0/45 with 112 frames 0.000s gLoss 0.025
+Video 1/45 with 244 frames 0.000s gLoss 0.040
+Video 2/45 with 168 frames 0.000s gLoss 0.032
+Video 3/45 with 108 frames 0.000s gLoss 0.029
+Video 4/45 with 188 frames 0.000s gLoss 0.008
+Video 5/45 with 120 frames 0.000s gLoss 0.012
+Video 6/45 with 128 frames 0.000s gLoss 0.009
+Video 7/45 with 143 frames 0.000s gLoss 0.006
+Video 8/45 with 193 frames 0.000s gLoss 0.013
+Video 9/45 with 125 frames 0.000s gLoss 0.013
+Video 10/45 with 110 frames 0.000s gLoss 0.018
+Video 11/45 with 146 frames 0.000s gLoss 0.014
+Video 12/45 with 117 frames 0.000s gLoss 0.026
+Video 13/45 with 239 frames 0.000s gLoss 0.071
+Video 14/45 with 195 frames 0.000s gLoss 0.025
+Video 15/45 with 216 frames 0.000s gLoss 0.029
+Video 16/45 with 161 frames 0.000s gLoss 0.018
+Video 17/45 with 201 frames 0.000s gLoss 0.031
+Video 18/45 with 228 frames 0.000s gLoss 0.025
+Video 19/45 with 200 frames 0.000s gLoss 0.017
+Video 20/45 with 300 frames 0.000s gLoss 0.039
+Video 21/45 with 192 frames 0.000s gLoss 0.009
+Video 22/45 with 117 frames 0.000s gLoss 0.006
+Video 23/45 with 97 frames 0.000s gLoss 0.018
+Video 24/45 with 138 frames 0.000s gLoss 0.009
+Video 25/45 with 105 frames 0.000s gLoss 0.005
+Video 26/45 with 148 frames 0.000s gLoss 0.010
+Video 27/45 with 185 frames 0.000s gLoss 0.012
+Video 28/45 with 150 frames 0.000s gLoss 0.012
+Video 29/45 with 157 frames 0.000s gLoss 0.013
+Video 30/45 with 192 frames 0.000s gLoss 0.009
+Video 31/45 with 201 frames 0.000s gLoss 0.019
+Video 32/45 with 88 frames 0.000s gLoss 0.008
+Video 33/45 with 122 frames 0.000s gLoss 0.017
+Video 34/45 with 77 frames 0.000s gLoss 0.024
+Video 35/45 with 130 frames 0.000s gLoss 0.035
+Video 36/45 with 104 frames 0.000s gLoss 0.035
+Video 37/45 with 142 frames 0.000s gLoss 0.012
+Video 38/45 with 93 frames 0.000s gLoss 0.036
+Video 39/45 with 91 frames 0.000s gLoss 0.019
+Video 40/45 with 103 frames 0.000s gLoss 0.015
+Video 41/45 with 79 frames 0.000s gLoss 0.023
+Video 42/45 with 88 frames 0.000s gLoss 0.022
+Video 43/45 with 116 frames 0.000s gLoss 0.017
+Video 44/45 with 92 frames 0.000s gLoss 0.020
+precs:     	[0.18 0.36 0.46 0.51 0.53 0.55 0.55 0.56 0.56]
+recalls:   	[0.40 0.56 0.56 0.67 0.71 0.76 0.76 0.78 0.78]
+F-measures:	[0.25 0.44 0.50 0.58 0.61 0.64 0.64 0.65 0.65]
+AP-measures:	[0.14 0.27 0.36 0.49 0.54 0.59 0.60 0.63 0.63]
+average prec-rec-F-AP-GazeLoss: 0.47 0.66 0.55 0.473 0.020
+
+experiments/scripts/sharon_ap_cvt.sh 1 30 1
+Called with args:
+Namespace(trained_net='output/sharon-ap-1/sharon_train_1/model_epoch30.pth', cfg_file='./experiments/cfgs/sharon-ap-1.yml', wait=True, imdb_name='sharon_test_1', seqdb_name='sharon1_test', set_cfgs=None)
+Using config:
+{'ACT_LAYERS_SIZE': 256,
+ 'ATT_SIZE': 512,
+ 'AUTOMATIC_NORM': False,
+ 'BG_SCORE': 0.0,
+ 'CACHE_DIR': '/home/igonzalez/workspace/incia/workspace/AMT-GAF/data/cache',
+ 'DB_DIR': '/home/igonzalez/workspace/incia/Datasets/GraspingDataset',
+ 'DELAY_FRAMES': 0,
+ 'DROPOUT': 0.0,
+ 'EXP_DIR': 'sharon-ap-1',
+ 'FLOW_MEAN': 1.1833,
+ 'FLOW_STD': 3.6951,
+ 'FMEANS': array([ 1.2668e+02,  8.9244e+00, -1.3254e+00,  1.9846e-01,  4.3478e-02,
+        5.4052e-02,  5.2136e-02]),
+ 'FRAMES_ACTIVE_OBJ': 10,
+ 'FRS_TO_PREDICT': 5,
+ 'FSTDS': array([111.2583,  17.856 ,  11.7072,   0.2955,   0.1602,   1.627 ,
+         1.6   ]),
+ 'GRID_SIZE': array([12, 12]),
+ 'INPUT_WEIGHTS': array([1., 1., 1., 1., 1., 1., 1.], dtype=float32),
+ 'MAP_OP': '2x_conv3x3',
+ 'MAXMV': 100.0,
+ 'MEMORY_FACTOR': 0.9,
+ 'NHEAD': 1,
+ 'OBJ_CROPPING': True,
+ 'OBJ_CROPSIZE': 350,
+ 'OBJ_PIXEL_MEANS': array([0.485, 0.456, 0.406]),
+ 'OBJ_PIXEL_STDS': array([0.229, 0.224, 0.225]),
+ 'PARAMETRIZATION': 2,
+ 'POS_ENCODING_LENGTH': 0,
+ 'POS_ENCODING_TYPE': 'sum',
+ 'PRE_FRAMES': 0,
+ 'RGB_MEAN': 0.8467,
+ 'RGB_STD': 1.5685,
+ 'ROOT_DIR': '/home/igonzalez/workspace/incia/workspace/AMT-GAF',
+ 'SEED': 999,
+ 'SIGMA_MAPS': 10.0,
+ 'SIGMA_MAPS1': 105.0,
+ 'TEMPORAL_HORIZON': 50,
+ 'TEST': {'CUT_FRAMES': 0,
+          'DETECTION_GUARD': 0.0,
+          'DETECTION_TH': 0.8,
+          'DETECTION_WINDOW': 1.0,
+          'FR_TO_SHOW': 0,
+          'F_A': 24,
+          'F_O': 24,
+          'F_P': 24,
+          'F_S': 1,
+          'NUM_WORKERS': 0,
+          'PRE_FRAMES': 0,
+          'SAVE_GAZE_PATTERNS': False},
+ 'TH_ACC': 5.0,
+ 'TH_MOV': 5.0,
+ 'TH_VWM': 0.1,
+ 'TIME_MARKS': array([ 30,  45,  60,  75,  90, 105, 120, 135, 150]),
+ 'TRAIN': {'ACC_FRAMES_BETWEEN': 5,
+           'ACC_MIN_FRAMES_DET': 3,
+           'ACC_PRE_FRAMES': 75,
+           'ACTLOSS_MIN_FRAMES_DET': 5,
+           'ACTLOSS_MUL': 2.0,
+           'ACTLOSS_PRE_FRAMES': 25,
+           'BATCH_SIZE': 1,
+           'BETA1': 0.9,
+           'BETA2': 0.999,
+           'CLIP_GRADS': 10.0,
+           'FREEZE_GAZE': False,
+           'F_A': 24,
+           'F_O': 24,
+           'F_P': 1,
+           'F_S': 1,
+           'HARD_MINING': False,
+           'LOSS_BALANCE_CLASSES': False,
+           'LOSS_ETA': 1.0,
+           'LOSS_MAX_ITERS': 2,
+           'LOSS_TH': 0.005,
+           'LOSS_WEIGHTS': array([1., 1.]),
+           'LR': 0.0005,
+           'LR_GAMMA': 0.5,
+           'LR_STEP_SIZE': 200,
+           'MAX_GAZE_DEV': 1000.0,
+           'MOMENTUM': 0.9,
+           'NOISE_FR_IDX': False,
+           'NOISE_STD': 0.25,
+           'NUM_WORKERS': 3,
+           'PERMUTE_OBJ': True,
+           'REMOVE_BAD_SEQUENCES_PROP': 0.0,
+           'SAMPLES_PER_BATCH': 256,
+           'SNAPSHOT_ITERS': 10000,
+           'UPDATE_SEQNET_TYPE': 'iter',
+           'WD': 0.0001,
+           'WEIGHTED_SAMPLER': False,
+           'WEIGHTED_SAMPLER_PARAM': 1.0},
+ 'VWM_CAPACITY': 5,
+ 'ZLENGTH': 512}
+Random Seed: 999
+Waiting for output/sharon-ap-1/sharon_train_1/model_epoch30.pth to exist...
+Waiting for output/sharon-ap-1/sharon_train_1/model_epoch30.pth to exist...
+Waiting for output/sharon-ap-1/sharon_train_1/model_epoch30.pth to exist...
+Waiting for output/sharon-ap-1/sharon_train_1/model_epoch30.pth to exist...
+Waiting for output/sharon-ap-1/sharon_train_1/model_epoch30.pth to exist...
+Waiting for output/sharon-ap-1/sharon_train_1/model_epoch30.pth to exist...
+Traceback (most recent call last):
+  File "/home/igonzalez/workspace/incia/workspace/AMT-GAF/./tools/test_actpred.py", line 82, in <module>
+    time.sleep(10)
+KeyboardInterrupt

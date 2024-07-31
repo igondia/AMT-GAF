@@ -1,0 +1,81 @@
+#GENERAL PARAMETERS
+EXP_DIR: "invisible-ap-1"
+DB_DIR: "/home/igonzalez/workspace/incia/Datasets/InvisibleDataset"
+#PARAMETERS FOR INPUT FEATURES 
+PARAMETRIZATION: 3 #Invisible
+BG_SCORE: 0.25
+GRID_SIZE: #Size of the spatial visual attention maps  
+- 12
+- 12
+SEED : 999
+AUTOMATIC_NORM: True #Automatic feature normalization
+#Los input weights son inversamente proporcionales a la longitud, pero agrupando variables: 1 Movimiento, 2 Scores, 3 VWM
+FMEANS: 
+- 0.0000
+- 0.0000
+- 0.0000
+- 0.0000
+- 0.0000
+- 0.0000
+- 0.0000
+- 0.0000
+- 0.0000
+- 0.0000
+
+FSTDS:
+- 1.0000
+- 1.0000
+- 1.0000
+- 1.0000
+- 1.0000
+- 1.0000
+- 1.0000
+- 1.0000
+- 1.0000
+- 1.0000
+- 1.0000
+
+#ARCHITECTURE PARAMETERS
+ATT_SIZE: 512
+ZLENGTH: 512
+MAP_OP: "2x_conv3x3"
+DROPOUT: 0.00
+TEMPORAL_HORIZON: 200 #Temporal horizon in the transformer encoder
+
+#TASK DEFINITION PARAMETERS
+FRS_TO_PREDICT: 5 #Distance to the gaze being predicted
+TIME_MARKS: #Time marks (measured in frames) to compute the results of the prediction
+ - 30
+ - 45
+ - 60
+ - 75
+ - 90
+ - 105
+ - 120
+ - 135
+ - 150
+ 
+#TRAIN SPECIFIC PARAMETERS 
+TRAIN:
+  NOISE_STD: 0.25
+  SAMPLES_PER_BATCH : 256
+  BATCH_SIZE : 1
+  NUM_WORKERS: 3
+  PERMUTE_OBJ: False
+  LR : 0.0001
+  MOMENTUM : 0.9
+  WD: 0.0001
+  LR_STEP_SIZE: 200
+  LR_GAMMA: 0.5
+  CLIP_GRADS: 10.0
+  ACTLOSS_PRE_FRAMES: 15
+  LOSS_TH: 0.005
+  ACC_MIN_FRAMES_DET: 3
+  ACC_FRAMES_BETWEEN: 5
+  ACC_PRE_FRAMES: 0
+  
+#TEST SPECIFIC PARAMETERS
+TEST:
+  NUM_WORKERS: 1
+  DETECTION_WINDOW: 2.0
+  PRE_FRAMES: 15

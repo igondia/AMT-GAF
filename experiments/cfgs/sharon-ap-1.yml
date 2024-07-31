@@ -1,0 +1,65 @@
+#GENERAL PARAMETERS
+EXP_DIR: "sharon-ap-1"
+DB_DIR: "/home/igonzalez/workspace/incia/Datasets/GraspingDataset"
+
+#PARAMETERS FOR INPUT FEATURES 
+PARAMETRIZATION: 2 #SHARON
+BG_SCORE: 0.0
+GRID_SIZE: #Size of the spatial visual attention maps 
+- 12 
+- 12
+SEED : 999
+FMEANS: 
+- 1.2668e+02
+- 8.9244e+00
+- -1.3254e+00
+- 1.9846e-01
+- 4.3478e-02
+- 5.4052e-02
+- 5.2136e-02
+FSTDS:
+- 111.2583
+- 17.8560
+- 11.7072
+- 0.2955
+- 0.1602
+- 1.6270
+- 1.6000
+
+#ARCHITECTURE PARAMETERS
+ATT_SIZE: 512
+ZLENGTH: 512
+MAP_OP: "2x_conv3x3"
+DROPOUT: 0.00
+TEMPORAL_HORIZON: 50 #Temporal horizon in the transformer encoder
+
+#TASK DEFINITION PARAMETERS
+FRS_TO_PREDICT: 5 #Distance to the gaze being predicted
+TIME_MARKS: #Time marks (measured in frames) to compute the results of the prediction
+ - 30
+ - 45
+ - 60
+ - 75
+ - 90
+ - 105
+ - 120
+ - 135
+ - 150
+#TRAIN SPECIFIC PARAMETERS 
+TRAIN:
+  NOISE_STD: 0.25
+  SAMPLES_PER_BATCH : 256
+  BATCH_SIZE : 1
+  NUM_WORKERS: 3
+  PERMUTE_OBJ: True #Permute objects during training
+  LR : 0.0005
+  MOMENTUM : 0.9
+  WD: 0.0001
+  LOSS_TH: 0.005 #Value for Constrained optimization for gaze prediction
+#TEST SPECIFIC PARAMETERS 
+TEST:
+  NUM_WORKERS: 1
+  DETECTION_WINDOW: 1.0
+  PRE_FRAMES: 0
+
+
