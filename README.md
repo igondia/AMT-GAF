@@ -37,12 +37,12 @@ experiments/scripts/sharon_ap_cv.sh $fold_num $config_num
 To test a model, from the base folder AMT-GAF, type:
 
 ``` 
->experiments/scripts/sharon_ap_cvt.sh $fold_num $epoch_num $config_num
+experiments/scripts/sharon_ap_cvt.sh $fold_num $epoch_num $config_num
 ```
 
 where $epoch_num is the epoch number you would like to test.
 
-### 1. GITW dataset
+### 2. Grasping-in-the-wild dataset
 
 To train a new model, from the base folder AMT-GAF, type:
 
@@ -53,6 +53,21 @@ To test a model, from the base folder AMT-GAF, type:
 
 ``` 
 experiments/scripts/gitw_ap_cvt.sh $fold_num $epoch_num $config_num
+```
+
+where $epoch_num is the epoch number you would like to test.
+
+### 2. Invisible dataset
+
+To train a new model, from the base folder AMT-GAF, type:
+
+``` 
+experiments/scripts/invisible_ap_cv.sh $fold_num $config_num
+```
+To test a model, from the base folder AMT-GAF, type:
+
+``` 
+experiments/scripts/invisible_ap_cvt.sh $fold_num $epoch_num $config_num
 ```
 
 where $epoch_num is the epoch number you would like to test.
