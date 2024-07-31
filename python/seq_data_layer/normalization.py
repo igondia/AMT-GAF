@@ -17,8 +17,7 @@ def updateMoms(data,mom1,mom2,flimits):
         idx=range(idxc,idxc+flimits[i]);
         mom1[i]+=data[...,idx].mean()
         mom2[i]+=(data[...,idx]**2).mean()
-        idxc=flimits[i]
-      
+        idxc+=flimits[i]
     return mom1,mom2
 
 def computeNorms(mom1,mom2,contIters):

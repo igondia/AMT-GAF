@@ -66,12 +66,7 @@ def test_net(trained_model, imdb):
     v_gLoss = np.zeros((num_videos,), dtype = np.float32)
     predV = np.zeros((num_videos,num_act_classes), dtype = np.float32)
     labelV = np.zeros((num_videos,), dtype = np.float32)
-    
-    '''Thresholds'''
-    THs=np.arange(0,1.00,0.025)
-    print(THs)
-    
-    v=0;
+
     
     successes=0
     cases=0
@@ -93,7 +88,8 @@ def test_net(trained_model, imdb):
             contIters+=1    
         means, stds=computeNorms(mom1,mom2,contIters)
         seqDataset.setNormalization(means.cpu().numpy(),stds.cpu().numpy())    
-        
+    
+    v=0;    
     for sample in dataloader:
         
         """Prepare data for the network"""
