@@ -27,13 +27,10 @@ cfg = __C
 __C.PARAMETRIZATION = 0
 
 
-#Feature input weights
-__C.INPUT_WEIGHTS = np.array([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],dtype=np.float32)
-__C.FMEANS = np.array([8.8672e+01,  1.3207e+01,  9.2209e+00,  1.9000e-01, -1.2246e+01,
-        5.8894e-04,  7.5189e-04,  3.9385e-02])
-__C.FSTDS = np.array([7.0142e+01, 9.0292e+01, 8.9751e+01, 3.1135e-01, 4.6109e+00,
-       4.5223e-02, 2.6700e-02, 5.8326e-02])
-
+#Feature normzalizerd
+__C.INPUT_WEIGHTS = np.array([1.0, 1.0, 1.0, 1.0, 1.0, 0.1, 0.1,1.0,1.0,1.0,1.0],dtype=np.float32) #IN case we apply manual weights
+__C.FMEANS = np.zeros((11,1),dtype=np.float32)
+__C.FSTDS = np.ones((11,1),dtype=np.float32)
 
 #Frame step
 __C.F_S = 1

@@ -89,9 +89,12 @@ class SeqDataset(Dataset):
         print(sample_weights)
         return sample_weights
 
-    def setNormalization(self,fmeans,fstds):
+    def setNormalization(self,fmeans,fstds,fweights=None):
         print('Set normalization values')
         self.fstds=fstds.copy()
         self.fmeans=fmeans.copy()
+        #If we have weights, we apply them to the stds
+        if fweights is not None:
+            self.fstds=self.fstds/fweights
         
         

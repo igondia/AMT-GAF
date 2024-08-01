@@ -142,13 +142,16 @@ def train_net(seqDataset, output_dir,pretrained_model=None, epochs=25):
         numF=len(flimits)
         mom1=torch.zeros(numF,requires_grad=False);
         mom2=torch.zeros(numF,requires_grad=False)
-        seqDataset.setNormalization(cfg.FMEANS,cfg.FSTDS)
+        #Setting 1s to fweights to compute right normalization values
+        fweights=np.array((numF,),dtype=np.float32)
+        fweights[...]=1.0
+        seqDataset.setNormalization(cfg.FMEANS,cfg.FSTDS,fweights)
         contIters=0    
         for sample in dataloader:
             mom1,mom2=updateMoms(sample['data'],mom1,mom2,flimits)
             contIters+=1    
         means, stds=computeNorms(mom1,mom2,contIters)
-        seqDataset.setNormalization(means.cpu().numpy(),stds.cpu().numpy())    
+        seqDataset.setNormalization(means.cpu().numpy(),stds.cpu().numpy(),np.array(cfg.INPUT_WEIGHTS)[:numF])    
         
     """Network training loop."""
     timer = Timer()
