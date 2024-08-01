@@ -28,7 +28,7 @@ __C.PARAMETRIZATION = 0
 
 
 #Feature normzalizerd
-__C.INPUT_WEIGHTS = np.array([1.0, 1.0, 1.0, 1.0, 1.0, 0.1, 0.1,1.0,1.0,1.0,1.0],dtype=np.float32) #IN case we apply manual weights
+__C.INPUT_WEIGHTS = np.array([1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,1.0,1.0,1.0,1.0],dtype=np.float32) #IN case we apply manual weights
 __C.FMEANS = np.zeros((11,1),dtype=np.float32)
 __C.FSTDS = np.ones((11,1),dtype=np.float32)
 
@@ -101,9 +101,7 @@ __C.TRAIN.NOISE_FR_IDX = False
 # Samples to use per minibatch
 __C.TRAIN.SAMPLES_PER_BATCH  = 1
 
-# Minibatch size (number of regions of interest [ROIs])
-__C.TRAIN.WEIGHTED_SAMPLER = False
-__C.TRAIN.WEIGHTED_SAMPLER_PARAM = 1.0
+# Minibatch size
 __C.TRAIN.BATCH_SIZE = 180
 # Action LOSS parameters
 # If positive, we learn the action only the pre_frames before it finishes, if 0-negative, simply requires t>=ACTLOSS_MIN_FRAMES_DET

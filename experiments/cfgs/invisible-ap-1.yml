@@ -9,7 +9,6 @@ GRID_SIZE: #Size of the spatial visual attention maps
 - 12
 SEED : 999
 AUTOMATIC_NORM: True #Automatic feature normalization
-#Los input weights son inversamente proporcionales a la longitud, pero agrupando variables: 1 Movimiento, 2 Scores, 3 VWM
 FMEANS: 
 - 0.0000
 - 0.0000
@@ -21,7 +20,6 @@ FMEANS:
 - 0.0000
 - 0.0000
 - 0.0000
-
 FSTDS:
 - 1.0000
 - 1.0000
@@ -34,7 +32,6 @@ FSTDS:
 - 1.0000
 - 1.0000
 - 1.0000
-
 #ARCHITECTURE PARAMETERS
 ATT_SIZE: 512
 ZLENGTH: 512
