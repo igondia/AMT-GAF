@@ -28,6 +28,12 @@ We provide scripts for training and testing. You need to modify the paths in the
 
 ### 1. SHARON dataset
 
+The dataset can be downloaded from:
+- SHARON-OBJECTS: to train object detectors with weak supervision (not necessary if you use our features). It can be downloaded from [here](https://www.tsc.uc3m.es/~igonzaez/resources/SHARON-OBJECTS.zip)
+- SHARON-GRASP: for action forecasting. It can be downloaded from [here](https://www.tsc.uc3m.es/~igonzaez/resources/SHARON-GRASP.zip)
+
+In addition, you can use our features for action forecasting (see our paper for the complete definition of features), which can be downloaded from [here](https://www.tsc.uc3m.es/~igonzaez/resources/SHARON-GRASP-features.zip) 
+
 To train a new model, from the base folder AMT-GAF, type:
 
 ``` 
